@@ -24,7 +24,7 @@ int main(){
         // cout<<mx<<" ";
         if (x>mx) mx = x;
     }
-    cout<<mx<<endl;
+    cout << mx << endl;
   }
   return 0;
 }
