@@ -14,16 +14,6 @@ typedef long long int ll;
 #define FORI(start,end) for(llu i=start; i<end; i++)
 
 int main(){
-  TEST(){
-    llu n;
-    cin>>n;
-    llu mx = 0;
-    for (llu i=0; i<n; i++){
-        llu x; cin>>x;
-        // cout<<mx<<" ";
-        if (x>mx) mx = x;
-    }
-    cout << mx << endl;
-  }
+  TEST(){}
   return 0;
 }
