@@ -56,8 +56,8 @@ void solve(){
 }
 
 signed main(){
-    FASTIO
-    #ifndef ONLINE_JUDGE
+  FASTIO
+  #ifndef ONLINE_JUDGE
 	freopen("input.txt","r",stdin);
 	freopen("output.txt","w",stdout);
 	#endif
