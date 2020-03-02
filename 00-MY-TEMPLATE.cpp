@@ -37,15 +37,14 @@
 /********   //All Required Header Files ********/
 
 using namespace std;
-
-typedef unsigned long long int llu;
+using llu = unsigned long long int;
 typedef long long int ll;
 typedef long double ldo;
+#define MOD                                 1000000007
 #define FASTIO                              ios_base::sync_with_stdio(false);
 #define TESTCASES()                         llu TestCases; cin>>TestCases; while(TestCases--)
 #define mp                                  make_pair
 #define pb                                  push_back
-#define MOD                                 1000000007
 #define mems(arr,val)                       memset((arr), val, sizeof((arr)))
 #define loop(iter, start, end, incr)        for (int iter=start ; i<end ; i+=incr)
 #define rloop(iter, start, end, decr)       for (int iter=start ; i>=end ; i-=decr)
@@ -56,7 +55,7 @@ void solve(){
     return;
 }
 
-int main(){
+signed main(){
     FASTIO
     #ifndef ONLINE_JUDGE
 	freopen("input.txt","r",stdin);
