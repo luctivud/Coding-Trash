@@ -51,6 +51,23 @@ typedef long double ldo;
 #define FOREACH(it, ___vect)                for (auto it = ___vect.begin(); it != ___vect.end(); it++)
 
 void solve(){
+    string s;
+    cin>>s;
+    ll n = s.length();
+    ll half = n/2;
+    ll arr[26] = {0};
+    loop(i,0,half,1){
+        arr[s[i]-'a']+=1;
+        arr[s[n-1-i]-'a']-=1;
+    }
+    bool flag = true;
+    loop(i,0,26,1){
+        if (arr[i]!=0){
+            flag = false;
+            break;
+        }
+    }
+    printf(flag?"YES\n":"NO\n");
 
     return;
 }
