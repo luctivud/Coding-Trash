@@ -9,8 +9,8 @@
                     | WORSHIPPER OF GREED |
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/* *******   All Required Header Files ********/
 // #include <bits/stdc++.h>
+/* *******   All Required Header Files ********/
 #include <iostream>
 #include <string>
 #include <vector>
@@ -51,6 +51,16 @@ typedef long double ldo;
 #define FOREACH(it, ___vect)                for (auto it = ___vect.begin(); it != ___vect.end(); it++)
 
 void solve(){
+    ll n; cin>>n;
+    ll a[n], b[n];
+    loop(i,0,n,1) cin>>a[i];
+    loop(i, 0, n, 1) cin>>b[i];
+    sort(a,a+n);
+    sort(b,b+n);
+    loop(i,0,n,1) cout<<a[i]<<" ";
+    cout<<endl;
+    loop(i,0,n,1) cout<<b[i]<<" ";
+    cout<<endl;
 
     return;
 }
