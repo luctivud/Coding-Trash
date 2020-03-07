@@ -61,15 +61,14 @@ llu lookup[256] = { FIND_PARITY };
 llu findParity(llu x){
 	x ^= x >> 16;
 	x ^= x >> 8;
-	x ^= x >> 4;
 	return lookup[x & 0xff];
 }
 
 void solve(){
-    llu n, q;
-    scanf("%llu %llu",&n,&q);
+    int n, q;
+    scanf ("%d %d",&n,&q);
     llu x;
-    llu odd =0, even =0;
+    int odd =0, even =0;
     forf(i,0,n,1){
         scanf("%llu",&x);
         if (findParity(x)){
@@ -79,18 +78,18 @@ void solve(){
         }
     }
     forf(i,0,q,1){
-        cin>>x;
+        scanf("%llu",&x);
         if (findParity(x)){
-            cout<<odd<<" "<<even<<endl;
+            printf("%d %d\n",odd,even);
         } else {
-            cout<<even<<" "<<odd<<endl;
+            printf("%d %d\n",even,odd);
         }
     }
     return;
 }
 
 signed main(){
-  FASTIO
+//   FASTIO
   #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
