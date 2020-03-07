@@ -50,8 +50,42 @@ typedef long double ldo;
 #define forr(iter, start, end, decr)        for (int iter=start ; i>=end ; i-=decr)
 #define FOREACH(it, ___vect)                for (auto it = ___vect.begin(); it != ___vect.end(); it++)
 
-void solve(){
+// macros to generate the lookup table (at compile-time)
+#define P2(n) n, n^1, n^1, n
+#define P4(n) P2(n), P2(n^1), P2(n^1), P2(n)
+#define P6(n) P4(n), P4(n^1), P4(n^1), P4(n)
+#define FIND_PARITY P6(0), P6(1), P6(1), P6(0)
+ 
+llu lookup[256] = { FIND_PARITY };
+ 
+llu findParity(llu x){
+	x ^= x >> 16;
+	x ^= x >> 8;
+	x ^= x >> 4;
+	return lookup[x & 0xff];
+}
 
+void solve(){
+    llu n, q;
+    scanf("%llu %llu",&n,&q);
+    llu x;
+    llu odd =0, even =0;
+    forf(i,0,n,1){
+        scanf("%llu",&x);
+        if (findParity(x)){
+            odd += 1;
+        } else {
+            even += 1;
+        }
+    }
+    forf(i,0,q,1){
+        cin>>x;
+        if (findParity(x)){
+            cout<<odd<<" "<<even<<endl;
+        } else {
+            cout<<even<<" "<<odd<<endl;
+        }
+    }
     return;
 }
 
@@ -65,3 +99,8 @@ signed main(){
         solve();
     return 0;
 }
+
+
+
+
+
