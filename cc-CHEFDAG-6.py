@@ -8,10 +8,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                   | WORSHIPPER OF GREED | 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-import itertools
-for __ in range(int(input())):
+for _testcases_ in range(int(input())):
     n, k = map(int, input().split())
-    d = {}
+    d = {}; revNode = {};
     for i in range(1,n+1):
         for j in range (1,n+1):
             if j!=i:
@@ -20,7 +19,6 @@ for __ in range(int(input())):
                 except:
                     d[i] = set()
                     d[i].add(j)
-    # print(d)
     for ki in range(k):
         li = list(map(int, input().split()))
         for i in range (n):
@@ -29,29 +27,19 @@ for __ in range(int(input())):
                     d[li[i]].remove(li[j])
                 except:
                     pass
-    permutli = [ [] for x in range(n) ]
-    for key, val in d.items():
-        if len(val) >= 1:
-            for i in d[key]:
-                permutli[key-1].append(i)
-        else:
-            permutli[key-1].append(0)
-    # print(permutli)
-    
-    allpermutations = list(itertools.product(*permutli))
-    count = n+2;    ansli = [];
-    for perm in allpermutations:
-        se = set()
-        for i in perm:
-            se.add(i)
-        sz = 0
-        for num in range(1, n+1):
-            if num not in se:
-                sz+=1
-        if sz < count:
-            count = sz
-            ansli = list(perm).copy()
-    print(count)
-    for ele in ansli:
-        print(ele, end = " ")
-    print()
+    for k, v in d.items():
+        for val in v:
+            try:
+                revNode[val].add(k)
+            except:
+                revNode[val] = set()
+                revNode[val].add(k)
+    print(revNode)
+    zeroInDegree = { x for x in range(1, n+1) }; oneOutDegree = {}; ansDict = {};
+    for i in range(1, n+1):
+        try:
+            if revNode[i]:
+                pass
+        except:
+            zeroInDegree.remove(i)
+    print(zeroInDegree)
