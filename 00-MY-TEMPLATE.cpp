@@ -47,6 +47,7 @@ typedef long double ldo;
 #define pb                                  push_back
 #define mems(arr,val)                       memset((arr), val, sizeof((arr)))
 #define FOREACH(it, ___vect)                for (auto it = ___vect.begin(); it != ___vect.end(); it++)
+#define endl                                "\n"
 
 void solve(){
 
