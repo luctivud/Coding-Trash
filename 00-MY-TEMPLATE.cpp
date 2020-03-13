@@ -46,8 +46,6 @@ typedef long double ldo;
 #define mp                                  make_pair
 #define pb                                  push_back
 #define mems(arr,val)                       memset((arr), val, sizeof((arr)))
-#define forf(iter, start, end, incr)        for (int iter=start ; i<end ; i+=incr)
-#define forr(iter, start, end, decr)        for (int iter=start ; i>=end ; i-=decr)
 #define FOREACH(it, ___vect)                for (auto it = ___vect.begin(); it != ___vect.end(); it++)
 
 void solve(){
