@@ -8,13 +8,19 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                   | WORSHIPPER OF GREED | 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+def checkIfMagicOddWillYield(magicNums):
+    for i in magicNums:
+        magicNumsCpy = magicNums.copy()
+        magicNumsCpy.remove(i)
+        if checkIfMagicEvenWillYield(magicNumsCpy) == True:
+            return False
+    return True
 def checkIfMagicEvenWillYield(magicNums):
-    fightingLength = 0
-    for i in range(2, max(magicNums)):
+    fightingLength = []
+    for i in range(2, 1+len(magicNums)+1):
         if i not in magicNums:
-            fightingLength = i
-            break
-    if fightingLength != 0:
+            fightingLength.append(i)
+    if len(fightingLength)%2 == 1 :
         return True
     else:
         return False
@@ -55,35 +61,58 @@ for _testcases_ in range(int(input())):
                 if v%2==1:
                     magicNums.append(k)
         # print(multiCountNums, singleCount, magicNums)
-        # #############################################################3333
         magicNumsLength = len(magicNums)
+    # #################################################################
         if magicNumsLength%2 == 0:
             if magicNumsLength == 0:
                 if singleCount%2 == 0:
                     ans = 0
                 else:
-                    ans = singleCount
+                    fightingLength =[]
+                    for i in range(2, len(multiCountNums)+2):
+                        if i not in multiCountNums:
+                            fightingLength.append(i)
+                    if len(fightingLength)%2 == 1:
+                        for i in multiCountNums:
+                            pass
+            # #############################################
+                    ans += singleCount
             else:
                 if singleCount%2 == 0:
+                    if len(magicNums)%4 != 0:
+                        magicNums.sort(reverse = True)
+                        for i in range(magicNumsLength):
+                            choi = 0
+                            for j in range(i+1, magicNumsLength):
+                                choi += nCr(magicNums[i], magicNums[j])
+                            ans += countNumbers[magicNums[i]] * choi
+                    else:
+                        for i in multiCountNums:
+                            magicNumsCpy = magicNums.copy()
+                            if i not in magicNums:
+                                magicNumsCpy.append(i)
+                                if checkIfMagicOddWillYield(magicNumsCpy) == True:
+                                    ans += countNumbers[i]
+                        for i in multiCountNums:
+                            magicNumsCpy = magicNums.copy()
+                            if i not in magicNums:
+                                magicNumsCpy.append(i)
+                                magicNumsCpy.append(i-1)
+                                if checkIfMagicEvenWillYield(magicNumsCpy) == False:
+                                    ans += countNumbers[i] * i
+                else:
                     if checkIfMagicEvenWillYield(magicNums) == False:
                         ans = singleCount
-                    magicNums.sort(reverse = True)
-                    for i in range(magicNumsLength):
-                        choi = 0
-                        for j in range(i+1, magicNumsLength):
-                            choi += nCr(magicNums[i], magicNums[j])
-                        ans += countNumbers[magicNums[i]] * choi
-                else:
-                    fightingLength = 0
-                    for i in range(2, max(magicNums)):
+                    fightingLength = []
+                    for i in range(2, 1+len(magicNums)+1):
                         if i not in magicNums:
-                            fightingLength = i
-                            break
-                    if fightingLength != 0:
-                        mx = max(magicNums)
-                        ans += countNumbers[mx] * nCr(mx, fightingLength)
-                    else:
-                        ans = 0
+                            fightingLength.append(i)
+                    if len(fightingLength)%2 == 1 :
+                        for j in magicNums:
+                            if j > len(fightingLength)+1:
+                                for i in fightingLength:
+                                    ans += countNumbers[j] * nCr(j, i)
+    # #########################__ODD_MAGIC__###########################################
         else:
             if magicNumsLength == 1:
                 if singleCount%2 == 0:
@@ -105,6 +134,13 @@ for _testcases_ in range(int(input())):
                         magicNumsCpy.remove(i)
                         if checkIfMagicEvenWillYield(magicNumsCpy) == False:
                             ans += countNumbers[i]
-                    else:
-                        ans = 0
+                    fightingLength = []
+                    for i in range(2, 1+len(magicNums)+1):
+                        if i not in magicNums:
+                            fightingLength.append(i)
+                    if len(fightingLength)%2 == 1 :
+                        for j in magicNums:
+                            if j > len(fightingLength)+1:
+                                for i in fightingLength:
+                                    ans += countNumbers[j] * nCr(j, i)
         print(ans % 998244353)

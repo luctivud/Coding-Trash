@@ -41,7 +41,7 @@ using llu = unsigned long long int;
 typedef long long int ll;
 typedef long double ldo;
 #define MOD                                 1000000007
-#define FASTIO()                            ios_base::sync_with_stdio(false);
+#define FASTIO                              ios_base::sync_with_stdio(false);
 #define TESTCASES()                         llu TestCases; cin>>TestCases; while(TestCases--)
 #define mp                                  make_pair
 #define pb                                  push_back
@@ -50,17 +50,25 @@ typedef long double ldo;
 #define endl                                "\n"
 
 void solve(){
+    ll n; cin>>n;
+    ll odd =0;
+    for (ll i=0; i<n; i++){
+        ll x; cin>>x;
+        if (x%2) odd+=1;
+    }
+    if (max(odd, n-odd) == n) cout<<"YES\n";
+    else cout<<"NO\n";
 
     return;
 }
 
 signed main(){
-    FASTIO()
-    // #ifndef ONLINE_JUDGE
-    //     freopen("input.txt","r",stdin);
-    //     freopen("output.txt","w",stdout);
-    // #endif
-    // TESTCASES()
+  FASTIO
+  // #ifndef ONLINE_JUDGE
+  //   freopen("input.txt","r",stdin);
+  //   freopen("output.txt","w",stdout);
+  // #endif
+    TESTCASES()
         solve();
     return 0;
 }
