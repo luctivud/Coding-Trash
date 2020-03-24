@@ -63,5 +63,9 @@ signed main(){
     return 0;
 }
 void solve(){
+    vector <int> vec;
+    vec = {1, 2, 3};
+    vec.pb(8);
+    FOREACH(it, vec) cout<<*it<<" ";
     return;
 }
