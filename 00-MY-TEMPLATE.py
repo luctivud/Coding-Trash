@@ -26,6 +26,6 @@ if __name__ == "__main__":
 THE LOGIC AND APPROACH IS BY ME @luctivud ( UDIT GUPTA )
 SOME PARTS OF THE CODE HAS BEEN TAKEN FROM WEBSITES LIKE::
 (I Own the code if no link is provided here or I may have missed mentioning it)
-: DO NOT PLAGIARISE.
+>>> DO NOT PLAGIARISE.
 TESTCASES:
 '''
