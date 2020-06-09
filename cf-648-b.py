@@ -17,7 +17,7 @@ def printchk(*args): return print(*args, end=" \ ")
 MODPRIME = int(1e9+7); BABYMODPR = 998244353;
 
 
-# sys.stdin = open("input.txt","r")  # <<<  Comment this line  >>> #
+sys.stdin = open("input.txt","r")  # <<<  Comment this line  >>> #
 from collections import Counter
 for _testcases_ in range(int(input())):
     n = int(input())
