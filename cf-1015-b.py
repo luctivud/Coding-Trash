@@ -22,6 +22,24 @@ if not ONLINE_JUDGE:
     sys.stdout = open("output.txt","w")  # <<<  Comment this line  >>> #
     sys.stderr = open("output.txt","w")  # <<<  Comment this line  >>> #
 
+n = int(input())
+s = list(input())
+t = list(input())
+flag = True
+ans = []
+for i in range(n):
+    if s[i] == t[i]:
+        continue
+    else:
+        j = i
+        while t[j] != s[i] and j < n:
+            j += 1
+        if j == n:
+            flag = False
+            break
+        else:
+            
+
 # for _testcases_ in range(int(input())):
 
 '''

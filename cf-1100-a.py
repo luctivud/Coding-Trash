@@ -16,13 +16,25 @@ def printchk(*args): return print(*args, end=" \ ")
 
 MODPRIME = int(1e9+7); BABYMODPR = 998244353;
 
-ONLINE_JUDGE = 0
+ONLINE_JUDGE = 1
 if not ONLINE_JUDGE:
     sys.stdin = open("input.txt","r")  # <<<  Comment this line  >>> #
     sys.stdout = open("output.txt","w")  # <<<  Comment this line  >>> #
     sys.stderr = open("output.txt","w")  # <<<  Comment this line  >>> #
 
 # for _testcases_ in range(int(input())):
+n, k = get_ints()
+li = get_list()
+tot = sum(li)
+ans = -float("inf")
+for i in range(k):
+    j = i
+    temp = 0
+    while j < n:
+        temp += li[j]
+        j += k
+    ans = max(abs(tot-temp), ans)
+print(ans)
 
 '''
 >>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
