@@ -1,35 +1,30 @@
-'''     ##     ##  #######  # #  ######
-        ##     ##  ##   ##  ###    ##
-        ##     ##  ##    #  # #    ##
-        #########  #######  # #    ##    '''
-
-import sys
-import math
-# sys.setrecursionlimit(10**6)
-
-def get_ints(): return map(int, input().strip().split())
-def get_list(): return list(get_ints())
-
-def printspx(*args): return print(*args, end="")
-def printsp(*args): return print(*args, end=" ")
-def printchk(*args): return print(*args, end=" \ ")
-
-MODPRIME = int(1e9+7); BABYMODPR = 998244353;
-
-ONLINE_JUDGE = 0
-if not ONLINE_JUDGE:
-    sys.stdin = open("input.txt","r")  # <<<  Comment this line  >>> #
-    sys.stdout = open("output.txt","w")  # <<<  Comment this line  >>> #
-    sys.stderr = open("output.txt","w")  # <<<  Comment this line  >>> #
-
-# for _testcases_ in range(int(input())):
-
-'''
->>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
-THE LOGIC AND APPROACH IS BY ME @luctivud ( UDIT GUPTA )
-SOME PARTS OF THE CODE HAS BEEN TAKEN FROM WEBSITES LIKE::
-(I Own the code if no link is provided here or I may have missed mentioning it)
-DO NOT PLAGIARISE.
-TESTCASES:
->>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
-'''
+class Solution:
+    def minSumOfLengths(self, arr: List[int], target: int) -> int:
+        ans, n = [], len(arr)     
+        prefix_sum = {}
+        curr = 0
+        for i in range(n):
+            curr += arr[i]
+            if curr == target:
+                ans.append([0, i])
+            elif curr-target in prefix_sum:
+                ans.append([prefix_sum[curr-target]+1, i])
+            prefix_sum[curr] = i
+            
+        ans.sort(key = lambda x: (x[1] - x[0], x[0]))
+        mn = float('inf')
+        i, j = 0, 1
+        while j < len(ans):
+            if ans[i][0] < ans[j][0]:
+                if ans[i][1] < ans[j][0]:
+                    mn = min(ans[i][1] + ans[j][1] - ans[i][0] - ans[j][0] + 2, mn)
+            elif ans[i][0] > ans[j][0]:
+                if ans[i][0] > ans[j][1]:
+                    mn = min(ans[i][1] + ans[j][1] - ans[i][0] - ans[j][0] + 2, mn)
+            j += 1
+        if mn != float('inf'):
+            return mn
+        return -1
+            
+            
+        
