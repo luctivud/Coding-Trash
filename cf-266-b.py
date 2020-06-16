@@ -13,31 +13,17 @@ MODPRIME = int(1e9+7); BABYMODPR = 998244353; MAXN = int(1e5)
 # sys.stdin  = open("input.txt","r"); sys.stdout = open("output.txt","w")
 
 # for _testcases_ in range(int(input())):
-s = input()
-t = input()
-flag = True
-for i in range(min(len(s), len(t))):
-    if s[i] == t[i]:
-        continue
-    elif s[i] == '@' or t[i] == '@':
-        if s[i] == '@':
-            if t[i] not in 'atcoder':
-                flag = False
-                break
-        else:
-            if s[i] not in 'atcoder':
-                flag = False
-                break
-    else:
-        flag = False
-        break
-if len(s) != len(t):
-    flag = False
-print("You can win") if flag else print("You will lose")
-
-        
-
-
+n, t = get_ints()
+s = list(input())
+while t:
+    i = 0
+    while i < n-1:
+        if s[i] == 'B' and s[i+1] == 'G':
+            s[i], s[i+1] = s[i+1], s[i]
+            i += 1
+        i += 1
+    t -= 1
+print("".join(s))
 '''
 >>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
 THE LOGIC AND APPROACH IS MINE @luctivud ( UDIT GUPTA )
