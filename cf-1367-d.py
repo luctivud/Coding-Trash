@@ -10,7 +10,7 @@ def printsp(*args): return print(*args, end=" ")
 
 MODPRIME = int(1e9+7); BABYMODPR = 998244353; MAXN = int(1e5)
 
-# sys.stdin  = open("input.txt","r"); sys.stdout = open("output.txt","w")
+sys.stdin  = open("input.txt","r"); sys.stdout = open("output.txt","w")
 
 for _testcases_ in range(int(input())):
     s = input()
