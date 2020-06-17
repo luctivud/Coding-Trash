@@ -1,1 +1,4 @@
-100
+aac
+c
+aba
+codeforces
