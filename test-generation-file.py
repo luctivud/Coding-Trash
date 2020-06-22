@@ -1,11 +1,9 @@
 #                           जय श्री राम
 
 
-# import sys; import math; from collections import *; import random
+import sys; import math; from collections import *; import random
 # sys.setrecursionlimit(10**6)
-# sys.stdout = open("input.txt","w")
-
-import random
+sys.stdout = open("input.txt","w")
 
 def get_ints(): return map(int, input().split())
 def get_list(): return list(get_ints())
