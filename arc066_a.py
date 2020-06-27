@@ -12,7 +12,7 @@ def printsp(*args): return print(*args, end=" ")
 UGLYMOD = int(1e9)+7; SEXYMOD = 998244353; MAXN = int(1e5)
 
 # sys.setrecursionlimit(10**6)
-sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
+# sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
 
 # for _testcases_ in range(int(input())):
 n = int(input())
