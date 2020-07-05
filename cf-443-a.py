@@ -15,16 +15,11 @@ UGLYMOD = int(1e9)+7; SEXYMOD = 998244353; MAXN = int(1e5)
 # sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
 
 # for _testcases_ in range(int(input())):
-n = int(input())
-li = get_list()
-mn, mx = min(li), max(li)
-mni = li[::-1].index(mn)
-mxi = li.index(mx)
-if n-mni-1 < mxi:
-    ans = -1
-else:
-    ans = 0
-print(ans+mxi+mni)
+s = set(list(input().strip('{}').split(', ')))
+s.discard('')
+print(len(s))
+# print(s)
+
 
 '''
 >>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!

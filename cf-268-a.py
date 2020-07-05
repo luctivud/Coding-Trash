@@ -16,15 +16,16 @@ UGLYMOD = int(1e9)+7; SEXYMOD = 998244353; MAXN = int(1e5)
 
 # for _testcases_ in range(int(input())):
 n = int(input())
-li = get_list()
-mn, mx = min(li), max(li)
-mni = li[::-1].index(mn)
-mxi = li.index(mx)
-if n-mni-1 < mxi:
-    ans = -1
-else:
-    ans = 0
-print(ans+mxi+mni)
+home = defaultdict(lambda : 0)
+away = defaultdict(lambda : 0)
+for i in range(n):
+    a, b = get_ints()
+    home[a] += 1
+    away[b] += 1
+ans = 0
+for jersey, count in home.items():
+    ans += (count * away[jersey])
+print(ans)
 
 '''
 >>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
