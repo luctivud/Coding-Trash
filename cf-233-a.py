@@ -15,17 +15,16 @@ UGLYMOD = int(1e9)+7; SEXYMOD = 998244353; MAXN = int(1e5)
 # sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
 
 # for _testcases_ in range(int(input())):
-n, k = get_ints()
-li = get_list()
-last = li[0]
-ans = 1
-for i in range(1, n):
-    if li[i] - last > k:
-        ans = 1
-    else :
-        ans += 1
-    last = li[i]
-print(ans)
+n = int(input())
+if n & 1:
+    print("-1")
+else:
+    for i in range(1, n+1):
+        if i & 1:
+            printsp(i+1)
+        else:
+            printsp(i-1)
+    print()
 
 '''
 >>> COMMENT THE STDIN!! CHANGE ONLINE JUDGE !!
