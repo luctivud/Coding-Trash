@@ -1,2 +1,9 @@
-5
-2 4 2 4 4
+8
+fced
+xyz
+r
+dabcef
+az
+aa
+bad
+babc
