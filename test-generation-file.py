@@ -21,8 +21,6 @@ for i in range(2, n+1):
 
 '''
 
-cd bits
-g++ stdc++.h
-cd ..
+g++ -std=c++17 bits/stdc++.h
 
 '''
