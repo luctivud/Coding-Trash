@@ -53,13 +53,14 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 void solveEach() {
     int n, m; _scan(n); _scan(m);
     v_int arr(n); INPUT(arr);
-
+    lld _scan
     bool pos[n] = {false};
 
     FORFWD(i, 0, m, 1) {
         int temp; _scan(temp);
         pos[temp-1] = true;
     }
+    
 
     FORFWD(i, 0, n, 1) {
         if (pos[i]) {

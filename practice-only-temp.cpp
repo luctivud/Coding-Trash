@@ -1,6 +1,6 @@
 
 
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
 
 const long long int UGLYMOD {1000000007};
@@ -51,7 +51,10 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach() {
-    
+    int n;
+    while (cin >> n) {
+        cout << n;
+    }
 
     return;
 }
@@ -66,7 +69,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    // TESTCASES_ARE_THERE()    
         solveEach();
     return 0;
 }
