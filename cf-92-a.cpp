@@ -1,4 +1,4 @@
-
+/*  Created by: @luctivud  at 2020-07-10 11:26:13  */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -51,7 +51,10 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach() {
-    
+    lld n; _scan(n); lld m; _scan(m);
+    m %= (n * (n+1))/2;
+    FORFWD(i, 1, n+1, 1) m -= (i > m) ? 0 : i;
+    cout << m;
 
     return;
 }
@@ -66,7 +69,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    // TESTCASES_ARE_THERE()
         solveEach();
     return 0;
 }

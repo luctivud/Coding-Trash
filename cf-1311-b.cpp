@@ -1,4 +1,4 @@
-
+/*  Created by: @luctivud  at 2020-07-10 12:45:13  */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -51,8 +51,35 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach() {
-    
+    int n, m; _scan(n); _scan(m);
+    v_int arr(n); INPUT(arr);
 
+    bool pos[n] = {false};
+
+    FORFWD(i, 0, m, 1) {
+        int temp; _scan(temp);
+        pos[temp-1] = true;
+    }
+
+    FORFWD(i, 0, n, 1) {
+        if (pos[i]) {
+            int j = i;
+            while (pos[j]) {
+                j++;
+            }
+            sort(arr.begin()+i, arr.begin()+j+1);
+            i = j;
+        }
+    }
+
+    // FOREACH(arr, i) cout << *i;
+    bool flag = true;
+
+    FORFWD(i, 0, n-1, 1) {
+        flag &= (arr[i] <= arr[i+1]);
+    }
+    
+    printYesNo(flag);
     return;
 }
 
@@ -66,7 +93,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    TESTCASES_ARE_THERE() 
         solveEach();
     return 0;
 }
