@@ -18,3 +18,11 @@ print(n)
 for i in range(2, n+1):
     print(i)
     # print(random.randint(1, 10), random.randint(1, 10))
+
+'''
+
+cd bits
+g++ stdc++.h
+cd ..
+
+'''

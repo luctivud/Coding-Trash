@@ -1,6 +1,6 @@
 /*  Created by: @luctivud  at 2020-07-10 12:45:13  */
 
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
 
 const long long int UGLYMOD {1000000007};
@@ -53,7 +53,7 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 void solveEach() {
     int n, m; _scan(n); _scan(m);
     v_int arr(n); INPUT(arr);
-    lld _scan
+    
     bool pos[n] = {false};
 
     FORFWD(i, 0, m, 1) {

@@ -53,7 +53,7 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 void solveEach() {
     int n;
     while (cin >> n) {
-        cout << n;
+        cout << n +2;
     }
 
     return;
