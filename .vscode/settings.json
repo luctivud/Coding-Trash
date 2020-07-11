@@ -37,5 +37,5 @@
     "fileheader.Author": "Udit Gupta @luctivud",
     "fileheader.LastModifiedBy": "Udit Gupta @luctivud",
     "fileheader.tpl": "/* * @Author: {author}  * @Date: {createTime} */",
-    "fileheadergit.tpl": "/*  Created by: @{author}  at {createTime}  */"
+    "fileheadergit.tpl": "/* * @Created by: {author} * @Email: {email} * @Date: {createTime} *  */"
 }
