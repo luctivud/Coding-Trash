@@ -1,6 +1,6 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
-// Title: practice-only-temp.cpp
-// dated: 11-07-2020 13:02:25
+// Title: cf-1154-b.cpp
+// dated: 11-07-2020 12:40:40
 // Creator & Template by : Udit Gupta @luctivud
 
 
@@ -46,16 +46,16 @@ typedef pair<lld, lld> p_lld;
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
 #define             TESTCASES_ARE_THERE()   _scan(Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
 #define                  mems(A77AY,V4LU)   memset((A77AY), V4LU, sizeof((A77AY)))
-#define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T < E9xD; IT7T += St3P)
-#define   FOR8WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T > E9xD; IT7T -= St3P)
-#define  FOR4NGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T;((St3P<0) ? IT7T>E9xD : IT7T<E9xD); IT7T += St3P)
+#define   FORFWD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T < E9xD; IT7T += St3P)
+#define   FORBWD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T > E9xD; IT7T -= St3P)
+#define  FORANGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T;((St3P<0) ? IT7T>E9xD : IT7T<E9xD); IT7T += St3P)
 #define                              endl   "\n"
-#define            FORE4CH(V3CT07_, IT7T)   for(auto IT7T = V3CT07_.begin(); IT7T != V3CT07_.end(); IT7T++)
+#define            FOREACH(V3CT07_, IT7T)   for(auto IT7T = V3CT07_.begin(); IT7T != V3CT07_.end(); IT7T++)
 #define                    INP4T(V3CT07_)   for(auto &V3CT07____IT7T : V3CT07_) _scan(V3CT07____IT7T)
 #define                                PI   3.1415926535897932384626433832795
-#define                          INF1N1TY   1000000000000000005LL;
-#define                     A7L(V3CT07_t)   V3CT07_t.begin(), V3CT07_t.end()
-#define             L3N(V3CT07_x, Typ30F)   (Typ30F) V3CT07_x.size()
+#define                              INFF   1000000000000000005LL;
+#define                     ALL(V3CT07_t)   V3CT07_t.begin(), V3CT07_t.end()
+#define             LEN(V3CT07_x, Typ30F)   (Typ30F) V3CT07_x.size()
 #define                            un_map   unordered_map
 #define                            un_set   unordered_set
 
@@ -81,8 +81,29 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld TestCaseNumber = 1) {
+    lld n; _scan(n);
+    v_int arr(n); INP4T(arr);
+    sort(ALL(arr));
+    arr.resize(unique(ALL(arr))-arr.begin());
+    lld sz = LEN(arr, lld);
+    if (sz == 1) {
+        cout << "0";
+    } else if (sz == 2) {
+        if ((arr[1] - arr[0])%2) {
+            cout << arr[1] - arr[0];
+        } else {
+            cout << (arr[1] - arr[0]) / 2;
+        }
+    } else if (sz == 3) {
+        if (arr[1] - arr[0] != arr[2] - arr[1]) {
+            cout << "-1";
+        } else {
+            cout << arr[1] - arr[0];
+        }
+    } else {
+        cout << "-1";
+    }
     
-
     cout << "\n"; 
     return;
 }
@@ -99,7 +120,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    // TESTCASES_ARE_THERE()
         solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }

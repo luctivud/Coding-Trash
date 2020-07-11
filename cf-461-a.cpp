@@ -1,6 +1,6 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
-// Title: practice-only-temp.cpp
-// dated: 11-07-2020 13:02:25
+// Title: cf-461-a.cpp
+// dated: 11-07-2020 14:52:02
 // Creator & Template by : Udit Gupta @luctivud
 
 
@@ -44,23 +44,23 @@ typedef pair<lld, lld> p_lld;
 
 
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
-#define             TESTCASES_ARE_THERE()   _scan(Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
+#define             TESTCASES_ARE_THERE()   _SC4N(Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
 #define                  mems(A77AY,V4LU)   memset((A77AY), V4LU, sizeof((A77AY)))
 #define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T < E9xD; IT7T += St3P)
 #define   FOR8WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T > E9xD; IT7T -= St3P)
 #define  FOR4NGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T;((St3P<0) ? IT7T>E9xD : IT7T<E9xD); IT7T += St3P)
 #define                              endl   "\n"
 #define            FORE4CH(V3CT07_, IT7T)   for(auto IT7T = V3CT07_.begin(); IT7T != V3CT07_.end(); IT7T++)
-#define                    INP4T(V3CT07_)   for(auto &V3CT07____IT7T : V3CT07_) _scan(V3CT07____IT7T)
+#define                    INP4T(V3CT07_)   for(auto &V3CT07____IT7T : V3CT07_) _SC4N(V3CT07____IT7T)
 #define                                PI   3.1415926535897932384626433832795
 #define                          INF1N1TY   1000000000000000005LL;
-#define                     A7L(V3CT07_t)   V3CT07_t.begin(), V3CT07_t.end()
+#define                    A47L(V3CT07_t)   V3CT07_t.begin(), V3CT07_t.end()
 #define             L3N(V3CT07_x, Typ30F)   (Typ30F) V3CT07_x.size()
 #define                            un_map   unordered_map
 #define                            un_set   unordered_set
 
 
-template<typename T> void _scan(T &x) { 
+template<typename T> void _SC4N(T &x) { 
     x = 0; bool neg = 0; 
     register T c = getchar();
     if (c == '-') neg = 1, c = getchar();
@@ -81,8 +81,13 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld TestCaseNumber = 1) {
-    
-
+    lld n; _SC4N(n);
+    v_lld arr(n); INP4T(arr);
+    lld ans = 0;
+    // lld ans = accumulate(A47L(arr), 0LL);
+    sort(A47L(arr));
+    FOR4NGE(i, 0, n-1, 1) ans += (i+2) * arr[i];
+    cout << ans + (n * arr[n-1]);
     cout << "\n"; 
     return;
 }
@@ -99,7 +104,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    // TESTCASES_ARE_THERE()
         solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }
