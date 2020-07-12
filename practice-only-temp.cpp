@@ -84,16 +84,20 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 void solveEach(lld TestCaseNumber = 1) {
     
-    int n; 
-    while (cin >> n) cout << n;
-    cout << "\n"; 
+    cout << "1" << "\n";
+    printf("2\n");
+    cout << "3" << "\n";
+    // cout << "\n"; 
+
+    // FOR4NGE(i, 1, 1000, 1) cout << i << "\n";
+
     return;
 }
 
 
 signed main() {
 
-    // GREED_FOR_SPEED;
+    GREED_FOR_SPEED;
 
     lld Test0xcs = 0, TotalT35tC4ses = 1;
 
