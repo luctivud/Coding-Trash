@@ -5,30 +5,30 @@
 // Creator & Template by : Udit Gupta @luctivud
 
 
-// #include "bits/stdc++.h"
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <sstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <set>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <limits>
-#include <time.h>
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
+#include "bits/stdc++.h"
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// #include <sstream>
+// #include <queue>
+// #include <deque>
+// #include <bitset>
+// #include <iterator>
+// #include <list>
+// #include <stack>
+// #include <map>
+// #include <set>
+// #include <functional>
+// #include <numeric>
+// #include <utility>
+// #include <limits>
+// #include <time.h>
+// #include <math.h>
+// #include <stdio.h>
+// #include <string.h>
+// #include <stdlib.h>
+// #include <assert.h>
 
 using namespace std;
 
@@ -84,7 +84,8 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 void solveEach(lld TestCaseNumber = 1) {
     
-
+    int n; 
+    while (cin >> n) cout << n;
     cout << "\n"; 
     return;
 }
@@ -101,7 +102,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    TESTCASES_ARE_THERE()
+    // TESTCASES_ARE_THERE()
         solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }

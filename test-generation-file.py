@@ -16,7 +16,7 @@ UGLYMOD = int(1e9+7); SEXYMOD = 998244353; MAXN = int(1e5)
 n = 200
 print(n)
 for i in range(2, n+1):
-    print(i)
+    print(2*i+1)
     # print(random.randint(1, 10), random.randint(1, 10))
 
 '''
