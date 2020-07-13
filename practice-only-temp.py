@@ -26,12 +26,11 @@ SMOL_ALPHABETS = {chr(i+OrdUnicode_a) : i for i in range(26)}
 MOD_JOHAN = int(1e9)+7; MOD_LIGHT = 998244353; INFINITY = float('inf')
 MAXN_EYEPATCH = int(1e5)+1; MAXN_FULLMETAL = 501
 
-sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
+# sys.stdin=open("input.txt","r");sys.stdout=open("output.txt","w")
 
 # for _testcases_ in range(int(input())): 
-while True:
-    try: print(input())
-    except: break
+# while True:
+print(input())
 
 
 

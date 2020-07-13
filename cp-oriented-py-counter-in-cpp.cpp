@@ -9,44 +9,38 @@
 
 using namespace std;
 
-template <typename Type30F1, typename Type30F2> class Counter {
+template <typename Type30F1, typename Type30F2> class _C0UN73R {
 
-    public:
-    map <Type30F1, Type30F2> CountOfElements;
+    public: map <Type30F1, Type30F2> CountOfElements;
 
-    bool ascending(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
+    private: static bool asc(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
         return (a.second < b.second); 
     } 
 
-    bool descending(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
+    private: static bool dsc(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
          return (a.second > b.second); 
     }
 
-    Counter(vector<Type30F1> ArrayToCountValues) {
+    public: _C0UN73R(vector<Type30F1> ArrayToCountValues) {
         for (auto elementInArray : ArrayToCountValues) {
             CountOfElements[elementInArray]++;
         }
     }
 
-    map <Type30F1, Type30F2> get_Count() {
+    map <Type30F1, Type30F2> getCountAsMap() {
         return CountOfElements;
     }
 
-    vector<pair<Type30F1, Type30F2>> get_Sorted(bool reverse = false) { 
-
+    vector<pair<Type30F1, Type30F2>> getSortedVectorPair(bool reverse = false) { 
         vector<pair<Type30F1, Type30F2>> SortedVector; 
-        
         for (auto& it : CountOfElements) SortedVector.push_back(it);
-
         if (reverse) {
-            sort(SortedVector.begin(), SortedVector.end(), descending);
+            sort(SortedVector.begin(), SortedVector.end(), dsc);
         } else {
-            sort(SortedVector.begin(), SortedVector.end(), ascending);
+            sort(SortedVector.begin(), SortedVector.end(), asc);
         }
-
         return SortedVector;
     } 
-
 };
 
 
@@ -66,13 +60,13 @@ signed main() {
     }
 
     // for (auto i : arr) cout << i << "\n";
-    Counter <string , int> Obj(arr);
-    map<string, int> count =  Obj.get_Count();
-
-    vector<pair<string, int>> sorted_count = Obj.get_Sorted(true);
+    _C0UN73R <string , int> Obj(arr);
+    map<string, int> count =  Obj.getCountAsMap();
+    vector<pair<string, int>> sorted_count = Obj.getSortedVectorPair();
     // // cout << typeid(Obj).name();
+    
 
-    for (auto i : count) {
+    for (auto i : sorted_count) {
         cout << i.first << " " << i.second << "\n";
     }
 
