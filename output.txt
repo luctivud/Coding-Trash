@@ -1,1 +1,16 @@
-4
+aa 1
+aabab 1
+aabbb 1
+abbab 1
+ba 1
+babb 1
+bbbb 1
+abba 2
+abbb 2
+b 2
+bb 2
+bbaa 2
+a 3
+3
+3.14159
+-9223372036854775807

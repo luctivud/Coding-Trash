@@ -1,8 +1,10 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
 // Title: practice-only-temp.cpp
-// dated: 12-07-2020 23:50:46
-// Creator & Template by : Udit Gupta @luctivud
+// created on: 13-07-2020 at 22:23:53
+// Creator & Template : Udit Gupta "@luctivud"
+// https://github.com/luctivud
+// https://www.linkedin.com/in/udit-gupta-1b7863135/
 
 
 #include "bits/stdc++.h"
@@ -35,6 +37,7 @@ using namespace std;
 const long long int MOD_JOHAN {1000000007};
 const long long int MOD_LIGHT {998244353};
 const long long int MAXN_EYEPATCH = 1e6 + 1LL;
+const long long int MAXN_HAIRUIHEHI = 1e9+1LL;
 const long long int MAXN_FULLMETAL = 501LL;
 
 typedef long long int lld;
@@ -47,33 +50,35 @@ typedef pair<lld, lld> p_lld;
 
 
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
-#define             TESTCASES_ARE_THERE()   _SC4N(Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
+#define             TESTCASES_ARE_THERE()   cin >> (Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
 #define                  _INP47T(V3CT07_)   for(auto &V3CT07____IT7T : V3CT07_) cin >> (V3CT07____IT7T)
 #define                  mems(A77AY,V4LU)   memset((A77AY), V4LU, sizeof((A77AY)))
 #define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T < E9xD; IT7T += St3P)
 #define   FOR8WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T > E9xD; IT7T -= St3P)
 #define  FOR4NGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T;((St3P<0) ? IT7T>E9xD : IT7T<E9xD); IT7T += St3P)
 #define            FOR34CH(V3CT07_, IT7T)   for(auto IT7T = V3CT07_.begin(); IT7T != V3CT07_.end(); IT7T++)
-#define           FORA77L(V3CT07_s, IT7T)   for (auto IT7T : V3CT07_s)
+#define           FORAL7L(V3CT07_s, IT7T)   for (auto IT7T : V3CT07_s)
 #define                   AL47L(V3CT07_t)   V3CT07_t.begin(), V3CT07_t.end()
 #define             L3N(V3CT07_x, Typ30F)   (Typ30F) V3CT07_x.size()
+#define                  R3V3R53D(Typ30F)   greater<Typ30F>()
 #define                              endl   "\n"
-#define                                PI   3.1415926535897932384626433832795
-#define                          INF1N1TY   1000000000000000005LL;
 #define                            un_map   unordered_map
 #define                            un_set   unordered_set
 
 
-template<typename T> void _SC4N(T &x) { 
-    x = 0; bool neg = 0; 
-    register T c = getchar();
-    if (c == '-') neg = 1, c = getchar();
-    while ((c < 48) || (c > 57)) c = getchar();
-    for ( ; c < 48||c > 57 ; c = getchar());
-    for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
-    if (neg) x *= -1;
-}
+// template<typename T> void _SC4N(T &x) { 
+//     x = 0; bool neg = 0; 
+//     register T c = getchar();
+//     if (c == '-') neg = 1, c = getchar();
+//     while ((c < 48) || (c > 57)) c = getchar();
+//     for ( ; c < 48||c > 57 ; c = getchar());
+//     for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
+//     if (neg) x *= -1;
+// }
 
+template <typename Type30F1> Type30F1 INF1N1TY  = numeric_limits<Type30F1>::max(); // INFINITY && -INFINITY
+
+template<class Type30F1> constexpr Type30F1 PI_HIKARI = Type30F1(acos(-1)); // PI = 3.1415926535897932384626433832795L
 
 template <typename Type30F1, typename Type30F2> class _C0UN73R {
 
@@ -122,14 +127,21 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 
-void solveEach(lld TestCaseNumber = 1) {
+void solveEach(lld T35TC453N = 1) {
     string s;
     vector<string> arr;
     while (cin >> s) arr.push_back(s);
     _C0UN73R <string , int> Obj(arr);
     map<string, int> count =  Obj.getCountAsMap();
     vector<pair<string, int>> sorted_count = Obj.getSortedVectorPair();
-    FORA77L(sorted_count, it) cout << it.first << " " << it.second << "\n";
+    FORAL7L(sorted_count, it) cout << it.first << " " << it.second << "\n";
+    cout << PI_HIKARI<int>;
+    cout << "\n"; 
+    cout << PI_HIKARI<long double> <<"\n";
+    cout << -INF1N1TY<lld> ;
+    
+    
+
 
     cout << "\n"; 
     return;
