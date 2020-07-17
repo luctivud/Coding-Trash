@@ -49,7 +49,7 @@ typedef pair<lld, lld> p_lld;
 
 
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
-#define             TESTCASES_ARE_THERE()   _SC4N(Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
+#define             TESTCASES_ARE_THERE()   cin >> (Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
 #define                  _INP47T(V3CT07_)   for(auto &V3CT07____IT7T : V3CT07_) cin >> (V3CT07____IT7T)
 #define                  mems(A77AY,V4LU)   memset((A77AY), V4LU, sizeof((A77AY)))
 #define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = ST47T; IT7T < E9xD; IT7T += St3P)
@@ -66,15 +66,15 @@ typedef pair<lld, lld> p_lld;
 #define                            un_set   unordered_set
 
 
-template<typename T> void _SC4N(T &x) { 
-    x = 0; bool neg = 0; 
-    register T c = getchar();
-    if (c == '-') neg = 1, c = getchar();
-    while ((c < 48) || (c > 57)) c = getchar();
-    for ( ; c < 48||c > 57 ; c = getchar());
-    for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
-    if (neg) x *= -1;
-}
+// template<typename T> void _SC4N(T &x) { 
+//     x = 0; bool neg = 0; 
+//     register T c = getchar();
+//     if (c == '-') neg = 1, c = getchar();
+//     while ((c < 48) || (c > 57)) c = getchar();
+//     for ( ; c < 48||c > 57 ; c = getchar());
+//     for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
+//     if (neg) x *= -1;
+// }
 
 
 template <typename Type30F1, typename Type30F2> class _C0UN73R {
@@ -125,12 +125,12 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld TestCaseNumber = 1) {
-    lld n; _SC4N(n);
+    lld n; cin >> (n);
     v_lld arr(n); _INP47T(arr);
     un_map <lld, lld> pos;
     
     FOR4NGE(i, 0, n, 1) {
-        lld temp; _SC4N(temp);
+        lld temp; cin >> (temp);
         pos[temp] = i+1;
     }
 
