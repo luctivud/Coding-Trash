@@ -1,13 +1,13 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
 // Title: newest-template.cpp
-// created on: 17-07-2020 at 15:58:05
+// created on: 17-07-2020 at 17:55:41
 // Creator & Template : Udit Gupta "@luctivud"
 // https://github.com/luctivud
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
 
 
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 // #include <iostream>
 // #include <string>
 // #include <vector>
@@ -52,7 +52,7 @@ typedef pair<lld, lld> p_lld;
 
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
 #define             TESTCASES_ARE_THERE()   cin >> (Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
-#define                  _INP47T(V3CT07_)   for(auto &V3CT07____IT7T : (V3CT07_)) cin >> (V3CT07____IT7T)
+#define                  _INP14T(V3CT07_)   for(auto &V3CT07____IT7T : (V3CT07_)) cin >> (V3CT07____IT7T)
 #define                  mems(A77AY,V4LU)   memset((A77AY), (V4LU), sizeof((A77AY)))
 #define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T); IT7T < (E9xD); IT7T += (St3P))
 #define   FOR8WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T); IT7T > (E9xD); IT7T -= (St3P))
@@ -68,13 +68,6 @@ typedef pair<lld, lld> p_lld;
 #define                            un_set   unordered_set
 
 
-template <typename Type30F1> Type30F1 POWM0D(Type30F1 a, Type30F1 b, Type30F1 mod) {
-    Type30F1 res = 1; a %= mod; assert(b>=0); for(; b ; b >>= 1) { if(b & 1) res = res * a % mod; a = a * a % mod; } return res;
-}
-
-template <typename Type30F1> Type30F1 gcd(Type30F1 a,Type30F1 b) { return b ? gcd(b, a % b) : a; }
-
-
 // template<typename T> void _SC4N(T &x) { 
 //     x = 0; bool neg = 0; 
 //     register T c = getchar();
@@ -85,32 +78,38 @@ template <typename Type30F1> Type30F1 gcd(Type30F1 a,Type30F1 b) { return b ? gc
 //     if (neg) x *= -1;
 // }
 
+template<typename Typ30f1> void _PR14T(vector <Typ30f1> arr, string sep = " ", bool newline = false) {
+    for (auto item: arr) cout << item << sep;
+    if (newline) cout << "\n";
+}
+
+
+template <typename Type30F1> Type30F1 POWM0D(Type30F1 a, Type30F1 b, Type30F1 mod) {
+    Type30F1 res = 1; a %= mod; assert(b>=0); for(; b ; b >>= 1) { if(b & 1) res = res * a % mod; a = a * a % mod; } return res;
+}
+
+template <typename Type30F1> Type30F1 gcd(Type30F1 a,Type30F1 b) { return b ? gcd(b, a % b) : a; }
+
 template <typename Type30F1> Type30F1 INF1N1TY  = numeric_limits<Type30F1>::max(); // INFINITY && -INFINITY INF1N1TY<lld>
 
 template<class Type30F1> constexpr Type30F1 PI_HIKARI = Type30F1(acos(-1)); // PI = 3.1415926535897932384626433832795L PI_HIKARI<long double>
 
 template <typename Type30F1, typename Type30F2> class _C0UN73R {
-
     public: map <Type30F1, Type30F2> CountOfElements;
-
     private: static bool asc(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
         return (a.second < b.second); 
     } 
-
     private: static bool dsc(pair<Type30F1, Type30F2>& a, pair<Type30F1, Type30F2>& b) {
          return (a.second > b.second); 
     }
-
     public: _C0UN73R(vector<Type30F1> ArrayToCountValues) {
         for (auto elementInArray : ArrayToCountValues) {
             CountOfElements[elementInArray]++;
         }
     }
-
     map <Type30F1, Type30F2> getCountAsMap() {
         return CountOfElements;
     }
-
     vector<pair<Type30F1, Type30F2>> getSortedVectorPair(bool reverse = false) { 
         vector<pair<Type30F1, Type30F2>> SortedVector; 
         for (auto& it : CountOfElements) SortedVector.push_back(it);
@@ -138,6 +137,7 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 void solveEach(lld T35TC453N = 1) {
     int x; cin >> x; cout <<x;
+
 
     cout << "\n"; 
     return;

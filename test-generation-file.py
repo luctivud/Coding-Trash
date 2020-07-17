@@ -23,6 +23,7 @@ random.shuffle(li)
 print(*li)
 random.shuffle(li)
 print(*li)
+print()
 # for i in range(n):
 #     sz = random.randint(1, int(1e4))
 #     print(sz)
