@@ -33,7 +33,8 @@
         "typeindex": "cpp",
         "utility": "cpp",
         "valarray": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "ios": "cpp"
     },
     "fileheader.Author": "Udit Gupta @luctivud",
     "fileheader.LastModifiedBy": "Udit Gupta @luctivud",

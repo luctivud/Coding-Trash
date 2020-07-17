@@ -30,25 +30,25 @@
 
 // C
 #ifndef _GLIBCXX_NO_ASSERT
-#include <cassert>
+// #include <cassert>
 #endif
-#include <cctype>
-#include <cerrno>
-#include <cfloat>
-#include <ciso646>
-#include <climits>
-#include <clocale>
-#include <cmath>
-#include <csetjmp>
-#include <csignal>
-#include <cstdarg>
-#include <cstddef>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <ctime>
-#include <cwchar>
-#include <cwctype>
+// #include <cctype>
+// #include <cerrno>
+// #include <cfloat>
+// #include <ciso646>
+// #include <climits>
+// #include <clocale>
+// #include <cmath>
+// #include <csetjmp>
+// #include <csignal>
+// #include <cstdarg>
+// #include <cstddef>
+// #include <cstdio>
+// #include <cstdlib>
+// #include <cstring>
+// #include <ctime>
+// #include <cwchar>
+// #include <cwctype>
 
 #if __cplusplus >= 201103L
 #include <ccomplex>
@@ -70,14 +70,14 @@
 #include <fstream>
 #include <functional>
 #include <iomanip>
-#include <ios>
-#include <iosfwd>
+// #include <ios>
+// #include <iosfwd>
 #include <iostream>
 #include <istream>
 #include <iterator>
 #include <limits>
 #include <list>
-#include <locale>
+// #include <locale>
 #include <map>
 #include <memory>
 #include <new>
@@ -135,8 +135,8 @@
 
 #if __cplusplus > 201703L
 #include <bit>
-// #include <compare>
-// #include <span>
-// #include <syncstream>
+#include <compare>
+#include <span>
+#include <syncstream>
 #include <version>
 #endif
