@@ -15,14 +15,20 @@ SMOL_ALPHABETS = {i : chr(i+ord('a')) for i in range(26)}
 UGLYMOD = int(1e9+7); SEXYMOD = 998244353; MAXN = int(1e5)
 
 
-n = 10
+n = random.randint(1, int(1e5))
 print(n)
-s = '()'
-for i in range(n):
-    sz = random.randint(1, 11)
-    for j in range(sz):
-        printspx(s[random.randint(0, 1)])
-    print()
+# s = '()'
+li = [i+1 for i in range(n)]
+random.shuffle(li)
+print(*li)
+random.shuffle(li)
+print(*li)
+# for i in range(n):
+#     sz = random.randint(1, int(1e4))
+#     print(sz)
+    # for j in range(sz):
+    #     printspx(s[random.randint(0, 1)])
+    # print()
     # sz = random.randint(1, 5)
     # # printsp(sz)
     # for i in range(sz):

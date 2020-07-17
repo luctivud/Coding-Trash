@@ -1,11 +1,3 @@
-2
-3 3
-xab
-i##
-caa
-5 4
-pvql
-vc#u
-q#iu
-l#hj
-tvmz
+5
+1 2 3 4 5
+4 3 2 1 5
