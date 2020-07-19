@@ -1,7 +1,7 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
-// Title: practice-only-temp.cpp
-// created on: 18-07-2020 at 22:57:11
+// Title: cc-DGTMAGIC.cpp
+// created on: 18-07-2020 at 23:52:15
 // Creator & Template : Udit Gupta "@luctivud"
 // https://github.com/luctivud
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
@@ -142,17 +142,27 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld T35TC453N = 1) {
-    string s;
-    vector<string> arr;
-    while (cin >> s) arr.push_back(s);
-    _C0UN73R <string , int> Obj(arr);
-    map<string, int> count =  Obj.getCountAsMap();
-    vector<pair<string, int>> sorted_count = Obj.getSortedVectorPair();
-    FORAL7L(sorted_count, it) cout << it.first << " " << it.second << "\n";
-    cout << PI_HIKARI<int>;
-    cout << "\n"; 
-    cout << PI_HIKARI<long double> <<"\n";
-    cout << -INF1N1TY<lld> ;
+    lld a, b; cin >> a >> b;
+    if (a==0) {
+        FOR4NGE(base, 2, 21, 1) {
+            cout << 1 << " ";
+        }
+    } else {
+        FOR4NGE(base, 2, 21, 1) {
+            long double div = (long double) log10l((long double)base);
+            long double num = (long double) b * (long double)log10l((long double)a);
+            long double temp = div;
+            // lld ans = 1;
+            // // cout << div << " " << num ;
+            // while ((div <= num)) {
+            //     div += temp;
+            //     ans += 1;
+            // }
+            lld ans = floorl(num / div);
+            // lld res = (lld)(floor((b * log(a)) / log(base))) + 1LL;  
+            cout << ans + 1 << " ";
+        }
+    }
 
     cout << "\n"; 
     return;
@@ -170,7 +180,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    // TESTCASES_ARE_THERE()
+    TESTCASES_ARE_THERE()
         solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }

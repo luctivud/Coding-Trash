@@ -1,7 +1,7 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
-// Title: practice-only-temp.cpp
-// created on: 18-07-2020 at 22:57:11
+// Title: cc-SCTFIGHT.cpp
+// created on: 18-07-2020 at 22:35:20
 // Creator & Template : Udit Gupta "@luctivud"
 // https://github.com/luctivud
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
@@ -142,17 +142,16 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld T35TC453N = 1) {
-    string s;
-    vector<string> arr;
-    while (cin >> s) arr.push_back(s);
-    _C0UN73R <string , int> Obj(arr);
-    map<string, int> count =  Obj.getCountAsMap();
-    vector<pair<string, int>> sorted_count = Obj.getSortedVectorPair();
-    FORAL7L(sorted_count, it) cout << it.first << " " << it.second << "\n";
-    cout << PI_HIKARI<int>;
-    cout << "\n"; 
-    cout << PI_HIKARI<long double> <<"\n";
-    cout << -INF1N1TY<lld> ;
+    lld n ; cin >> n;
+    v_lld arr(n); _INP14T(arr);
+    _C0UN73R <lld, lld> Obj(arr);
+    map<lld, lld> count = Obj.getCountAsMap();
+    lld ans = 0;
+    for (auto i : count) {
+        ans = max(ans, i.second);
+    }
+
+    cout << ans;
 
     cout << "\n"; 
     return;
@@ -170,7 +169,7 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    // TESTCASES_ARE_THERE()
+    TESTCASES_ARE_THERE()
         solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }
