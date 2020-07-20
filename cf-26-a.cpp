@@ -1,7 +1,7 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
-// Title: practice-only-temp.cpp
-// created on: 20-07-2020 at 18:20:23
+// Title: cf-26-a.cpp
+// created on: 19-07-2020 at 17:59:14
 // Creator & Template : Udit Gupta "@luctivud"
 // https://github.com/luctivud
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
@@ -34,25 +34,36 @@
 
 using namespace std;
 
+const long long int MOD_JOHAN {1000000007};
+const long long int MOD_LIGHT {998244353};
+const long long int MAXN_EYEPATCH = 1e6 + 1LL;
+const long long int MAXN_HAIRUIHEHI = 1e9+1LL;
+const long long int MAXN_FULLMETAL = 501LL;
+const long double EPSILON_AMON = 1e-9; 
+
 typedef long long int lld;
 typedef unsigned long long int llu;
 typedef vector<int> v_int;
 typedef vector<lld> v_lld;
 typedef vector<llu> v_llu;
+typedef vector<string> v_str;
 typedef pair<int, int> p_int;
 typedef pair<lld, lld> p_lld;
 
 
 #define                   GREED_FOR_SPEED   ios_base::sync_with_stdio(false); cin.tie(0)
-#define             TESTCASES_ARE_THERE()   cin >> (Test0xo); T35TC4535 = Test0xo; while(Test0xo--)
-#define                  _INP14T(V3CT07)   for(auto &V3CT07_IT7T : (V3CT07)) cin >> (V3CT07_IT7T)
-#define                 mems(A77AY, V4LU)   memset((A77AY), (V4LU), sizeof((A77AY)))
-#define              CHECKC0N(IT7T, E9xD, St3P)    (((St3P)<0) ? (IT7T)>(E9xD) : (IT7T)<(E9xD))
-#define  FOR4NGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T); CHECKC0N(IT7T, (E9xD), (St3P)); (IT7T) += (St3P))
-#define            FORE4CH(IT7T, V3CT07)   for(auto IT7T = (V3CT07).begin(); IT7T != (V3CT07).end(); IT7T++)
-#define           FORALL7(IT7T, V3CT07)   for (auto IT7T : (V3CT07))
-#define                  ALL7L(V3CT07)   (V3CT07).begin(), (V3CT07).end()
-#define                  RAL7L(V3CT07)   (V3CT07).rbegin(), (V3CT07).rend()
+#define             TESTCASES_ARE_THERE()   cin >> (Test0xcs); TotalT35tC4ses = Test0xcs; while(Test0xcs--)
+#define                  _INP14T(V3CT07_)   for(auto &V3CT07____IT7T : (V3CT07_)) cin >> (V3CT07____IT7T)
+#define                  mems(A77AY,V4LU)   memset((A77AY), (V4LU), sizeof((A77AY)))
+#define   FOR4WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T); IT7T < (E9xD); IT7T += (St3P))
+#define   FOR8WD(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T); IT7T > (E9xD); IT7T -= (St3P))
+#define  FOR4NGE(IT7T, ST47T, E9xD, St3P)   for(auto IT7T = (ST47T);(((St3P)<0) ? (IT7T)>(E9xD) : (IT7T)<(E9xD)); (IT7T) += (St3P))
+#define            FOR34CH(IT7T, V3CT07_)   for(auto IT7T = (V3CT07_).begin(); IT7T != (V3CT07_).end(); IT7T++)
+#define           FORAL7L(IT7T, V3CT07_s)   for (auto IT7T : (V3CT07_s))
+#define                  ALL47L(V3CT07_t)   (V3CT07_t).begin(), (V3CT07_t).end()
+#define                  RAL47L(V3CT07_t)   (V3CT07_t).rbegin(), (V3CT07_t).rend()
+#define            LEN3(V3CT07_x, Typ30F)   (Typ30F) ((V3CT07_x).size())
+#define                GRE3V3R53D(Typ30F)   greater<Typ30F>()
 #define                              endl   "\n"
 #define                            un_map   unordered_map
 #define                            un_set   unordered_set
@@ -68,13 +79,43 @@ typedef pair<lld, lld> p_lld;
 //     if (neg) x *= -1;
 // }
 
-
 // _PRi14T(arr);
 template<typename Typ30f1> 
 void _PRi14T(vector <Typ30f1> arr,  bool newline = false, string sep = " ") {
     for (auto item: arr) cout << item << sep;
     if (newline) cout << "\n";
 }
+
+
+// POWM0D(a, b, mod)
+template <typename Type30F1> 
+Type30F1 POWM0D(Type30F1 a, Type30F1 b, Type30F1 mod) {
+    Type30F1 res = 1;
+    a %= mod; 
+    assert(b>=0); 
+    for(; b ; b >>= 1) { 
+        if(b & 1) res = res * a % mod; 
+        a = a * a % mod; 
+    } 
+    return res;
+}
+
+
+// GCD
+template <typename Type30F1> 
+Type30F1 gcd(Type30F1 a,Type30F1 b) { 
+    return b ? gcd(b, a % b) : a; 
+}
+
+// INFINITY && -INFINITY 
+// INF1N1TY<lld>
+template <typename Type30F1> 
+Type30F1 INF1N1TY  = numeric_limits<Type30F1>::max(); 
+
+// PI = 3.1415926535897932384626433832795L 
+// PI_HIKARI<long double>;
+template<class Type30F1> 
+constexpr Type30F1 PI_HIKARI = Type30F1(acos(-1)); 
 
 
 void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string SecondChoice = "Ud") { 
@@ -87,9 +128,7 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld T35TC453N = 1) {
-    FOR4NGE(i, 1, 5, 1) cout << i;
-    cout << "\n";
-    FOR4NGE(i, 5, 1, -1) cout << i;
+    
 
     cout << "\n"; 
     return;
@@ -100,15 +139,15 @@ signed main() {
 
     // GREED_FOR_SPEED;
 
-    lld Test0xo = 0, T35TC4535 = 1;
+    lld Test0xcs = 0, TotalT35tC4ses = 1;
 
     #ifndef ONLINE_JUDGE
         freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout);
     #endif 
 
-    // TESTCASES_ARE_THERE()
-        solveEach(T35TC4535 - Test0xo);
+    TESTCASES_ARE_THERE()
+        solveEach(TotalT35tC4ses - Test0xcs);
     return 0;
 }
 

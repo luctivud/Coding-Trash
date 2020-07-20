@@ -16,6 +16,14 @@ UGLYMOD = int(1e9+7); SEXYMOD = 998244353; MAXN = int(1e5)
 SMOL_ALPHABETS[26] = '\\n'
 SMOL_ALPHABETS[27] = '\\'
 
+
+n = random.randint(1, 10000)
+k = min(n, random.randint(1, 1000))
+m = random.randint(1, int(1e7))
+print(n, k, m)
+for i in range(n):
+    printsp(random.randint(-int(1e7), int(1e7)))
+
 # print(SMOL_ALPHABETS[26], SMOL_ALPHABETS[27])
 
 # print(100)
