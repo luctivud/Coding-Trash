@@ -66,15 +66,15 @@ typedef pair<lld, lld> p_lld;
 #define                            un_set   unordered_set
 
 
-template<typename T> void _SC4N(T &x) { 
-    x = 0; bool neg = 0; 
-    register T c = getchar();
-    if (c == '-') neg = 1, c = getchar();
-    while ((c < 48) || (c > 57)) c = getchar();
-    for ( ; c < 48||c > 57 ; c = getchar());
-    for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
-    if (neg) x *= -1;
-}
+// template<typename T> void _SC4N(T &x) { 
+//     x = 0; bool neg = 0; 
+//     register T c = getchar();
+//     if (c == '-') neg = 1, c = getchar();
+//     while ((c < 48) || (c > 57)) c = getchar();
+//     for ( ; c < 48||c > 57 ; c = getchar());
+//     for ( ; c > 47 && c < 58; c = getchar() ) x= (x << 3) + ( x << 1 ) + ( c & 15 );
+//     if (neg) x *= -1;
+// }
 
 
 template <typename Type30F1, typename Type30F2> class _C0UN73R {
@@ -125,7 +125,7 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEach(lld T35TC453N = 1) {
-    lld n; _SC4N(n);
+    lld n; cin >> (n);
 
     lld ans = (n * (n+1)) / 2;
 

@@ -1,13 +1,13 @@
 /*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
 
 // Title: practice-only-temp.cpp
-// created on: 21-07-2020 at 18:24:27
+// created on: 20-07-2020 at 18:51:19
 // Author & Template : Udit "luctivud" Gupta
 // https://github.com/luctivud
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
+// //"C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe"
 
-
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 // #include <iostream>
 // #include <string>
 // #include <vector>
@@ -47,7 +47,7 @@ typedef pair<lld, lld> p_lld;
 #define         _INP14T(V3C0)  for(auto &V3C0_IT7 : (V3C0)) cin >> (V3C0_IT7)
 #define     mems(A77AY, V4LU)  memset((A77AY), (V4LU), sizeof((A77AY)))
 #define   CH3K(IT7, EN4, S7P)  (((S7P)<0) ? (IT7)>(EN4) : (IT7)<(EN4))
-#define for4(IT7,ST4,EN4,S7P)  for(auto IT7=(ST4); CH3K(IT7,EN4,S7P); (IT7)+=(S7P))
+#define forn(IT7,ST4,EN4,S7P)  for(auto IT7=(ST4); CH3K(IT7,EN4,S7P); (IT7)+=(S7P))
 #define    FORE4CH(IT7, V3C0)  for(auto IT7=(V3C0).begin(); IT7!=(V3C0).end(); IT7++)
 #define    FORALL7(IT7, V3C0)  for (auto IT7 : (V3C0))
 #define           ALL7L(V3C0)  (V3C0).begin(), (V3C0).end()
@@ -86,15 +86,10 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 
 void solveEachTest(lld T35TC453N = 1) {
-    auto S34t = chrono:: high_resolution_clock::now(); 
-
-    
+    string temp; 
+    while (cin >> temp) cout << temp;
 
     cout << "\n"; 
-
-    auto S34p = chrono::high_resolution_clock::now(); 
-    auto D34n = chrono::duration_cast<chrono::microseconds>(S34p - S34t);
-    // cout << "Time Elapsed: " << D34n.count() / (long double) 1e6 << " seconds" << endl; 
     return;
 }
 
@@ -110,11 +105,13 @@ signed main() {
         freopen("output.txt", "w", stdout);
     #endif 
 
-    INDEPENDENT_CASES()
+    // INDEPENDENT_CASES()
         solveEachTest(T353 - T3X0);
     return 0;
 }
 
 /*
-(Code is mine, stated otherwise) ch|=spacelo &=_up change case
+THE LOGIC AND APPROACH IS MINE ( UDIT GUPTA )
+SOME PARTS OF THE CODE MAY HAVE BEEN TAKEN FROM WEBSITES LIKE::
+(I Own the code if no link is provided here or I may have missed mentioning it)ch|=spacelo &=_up change case
 */

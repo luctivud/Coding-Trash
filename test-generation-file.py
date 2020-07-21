@@ -24,6 +24,7 @@ print(n, k, m)
 for i in range(n):
     printsp(random.randint(-int(1e7), int(1e7)))
 
+
 # print(SMOL_ALPHABETS[26], SMOL_ALPHABETS[27])
 
 # print(100)
