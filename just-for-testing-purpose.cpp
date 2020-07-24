@@ -1,9 +1,9 @@
-/*     <<<  J A I ~ S H R E E ~ R A M  >>>     */
+/*      ░░█ ▄▀█ █   █▀ █░█ █▀█ █▀▀ █▀▀   █▀█ ▄▀█ █▀▄▀█  
+        █▄█ █▀█ █   ▄█ █▀█ █▀▄ ██▄ ██▄   █▀▄ █▀█ █░▀░█     */
 
-// Title: practice-only-temp.cpp
-// created on: 21-07-2020 at 18:24:27
-// Author & Template : Udit "luctivud" Gupta
-// https://github.com/luctivud
+
+// [just-for-testing-purpose.cpp] => [24-07-2020 @ 17:09:00] 
+// Author & Template by : Udit "luctivud" Gupta
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
 
 
@@ -87,37 +87,37 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 
 void solveEachTest(lld T35TC453N = 1) {
     auto S34t = chrono:: high_resolution_clock::now(); 
-    cout << "ok";
-    
-    string s;
-    while (cin >> s) cout << s;
 
+    string s; 
+    while (cin >> s) cout << s;
+    
 
     cout << "\n"; 
 
     auto S34p = chrono::high_resolution_clock::now(); 
     auto D34n = chrono::duration_cast<chrono::microseconds>(S34p - S34t);
-    cout << "Time Elapsed: " << D34n.count() / (long double) 1e6 << " seconds" << endl; 
+    // cout << "Time Elapsed: " << D34n.count() / (long double) 1e6 << " seconds" << endl; 
     return;
 }
 
 
 signed main() {
 
-    ios_base::sync_with_stdio(false); cin.tie(0);
+    // ios_base::sync_with_stdio(false); cin.tie(0);
 
     lld T3X0 = 0, T353 = 1;
 
-    // #ifndef ONLINE_JUDGE
-    //     freopen("input.txt", "r", stdin);
-    //     freopen("output.txt", "w", stdout);
-    // #endif 
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
+    #endif 
 
     // INDEPENDENT_CASES()
         solveEachTest(T353 - T3X0);
     return 0;
 }
 
-/*
-(Code is mine, stated otherwise) ch|=spacelo &=_up change case
-*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            SHREE RAM JAI RAM, JAI JAI RAM 
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// ch|=spacelo &=_up change case
