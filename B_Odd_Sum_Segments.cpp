@@ -2,13 +2,35 @@
         █▄█ █▀█ █   ▄█ █▀█ █▀▄ ██▄ ██▄   █▀▄ █▀█ █░▀░█     */
 
 
-// [check-speed-04.cpp] => [28-07-2020 @ 10:45:35] 
+// [B_Odd_Sum_Segments.cpp] => [27-07-2020 @ 12:22:06] 
 // Author & Template by : Udit "luctivud" Gupta
 // https://www.linkedin.com/in/udit-gupta-1b7863135/
 
 
 #include <bits/stdc++.h>
-#pragma GCC optimize "trapv"
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// #include <sstream>
+// #include <queue>
+// #include <deque>
+// #include <bitset>
+// #include <iterator>
+// #include <list>
+// #include <stack>
+// #include <map>
+// #include <set>
+// #include <functional>
+// #include <numeric>
+// #include <utility>
+// #include <limits>
+// #include <time.h>
+// #include <math.h>
+// #include <stdio.h>
+// #include <string.h>
+// #include <stdlib.h>
+// #include <assert.h>
 
 using namespace std;
 
@@ -62,7 +84,30 @@ void printYesNo(bool Expr, int YNType = 1, string FirstChoice = "Ud", string Sec
 void solveEachTest(lld T35TC453N = 1) {
     auto S34t = chrono:: high_resolution_clock::now(); 
 
-    
+    lld n, k; cin >> n >> k;
+
+    lld odd = 0, even = 0;
+
+    v_lld arr(n); _input(arr);
+
+    v_lld oddpos;
+
+    for (int i =0 ; i<n; i++) {
+        if (i & 1) { odd++; oddpos.push_back(i+1); }
+        else even++;
+    }
+
+    if (!((k&1)^(odd&1))) {
+        if (odd >= k) {
+            cout << "YES\n";
+            for4(j, 0, k-1, 1) cout << oddpos[j] << " ";
+            cout << n;
+        } else {
+            cout << "NO";
+        }
+    } else {
+        cout << "NO";
+    }
 
     cout << "\n"; 
 
@@ -75,14 +120,15 @@ void solveEachTest(lld T35TC453N = 1) {
 
 signed main() {
 
+    
     // ios_base::sync_with_stdio(false); cin.tie(0);
 
     lld T3X0 = 0, T353 = 1;
 
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif 
+    // #ifndef ONLINE_JUDGE
+    //     freopen("input.txt", "r", stdin);
+    //     freopen("output.txt", "w", stdout);
+    // #endif 
 
     INDEPENDENT_CASES()
         solveEachTest(T353 - T3X0);
